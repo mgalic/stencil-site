@@ -80,11 +80,8 @@ export class MyComponent {
   
   componentWillLoad() {
     this.store.mapStateToProps(this, (state) => {
-      const {
-        myReducer: { name }
-      } = state;
       return {
-        name
+        name: state.myReducer.name
       }
     });
    
